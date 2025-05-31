@@ -15,13 +15,13 @@ Este portafolio presenta una selección de mis trabajos y proyectos clave en div
 
 * ## Despliegue
 
-Este portafolio está desplegado y accesible en línea a través de Vercel.
+Este portafolio está desplegado y accesible en línea a través de Vercel: [Mi Portafolio](https://anthonyduarte-portafolio.vercel.app/)
 
 ## Contacto
 
 Puedes contactarme a través de:
 
-* LinkedIn: https://www.linkedin.com/in/anthonyrduarte/
+* [LinkedIn](https://www.linkedin.com/in/anthonyrduarte/)
 * Email: anthonyraduarte@gmail.com
 
 * ## Licencia
