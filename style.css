@@ -392,8 +392,8 @@ footer p {
     }
     .logo img {
         width: 40px; /* Logo de navegación un poco más pequeño */
-        margin-left: 10px; 
-        margin-top: 5px;
+        margin-left: 20px; 
+        margin-top: 10px;
     }
     .main-nav a {
         font-size: 1rem; /* Letras de navegación más pequeñas */
