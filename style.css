@@ -392,7 +392,7 @@ footer p {
     }
     .logo img {
         width: 40px; /* Logo de navegación un poco más pequeño */
-        margin-left: 20Spx; 
+        margin-left: 25px; 
         margin-top: 10px;
     }
     .main-nav a {
@@ -400,8 +400,8 @@ footer p {
     }
     .main-nav ul {
         padding-left: 20px; /* Ajuste para centrar en móvil */
-        padding-right: 15px;
-        padding-top: 15px;
+        padding-right: 20px;
+        padding-top: 30px;
     }
 
     /* PORTAFOLIOS */
