@@ -34,40 +34,57 @@ header {
 
 header .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
-    max-width: 560px;
-    height: 57px;
-    margin: 0 auto;
+    max-width: 520px; /* ¡MODIFICADO: AUMENTADO PARA QUE "DESARROLLO WEB" QUEPA! */
+    width: 90%; /* Sigue siendo flexible en pantallas más pequeñas */
+    height: 57px; /* Altura específica */
+    margin: 0 auto; /* Para centrar la barra horizontalmente */
     background-color: #1a1a1a;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 0 15px;
+    padding-left: 0 15px;
     border: 1px solid white;
-    transform: translateX(-10px);
-    /* AÑADIDO PARA RESPONSIVE */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-    justify-content: space-between; /* MODIFICADO: Para que el logo y la navegación se separen al inicio */
+    transform: translateX(-10px); /* Para el efecto de "sacar" la barra hacia la izquierda */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan en escritorio */
 }
 
 .logo {
     margin-top: 4px; /* Ajusta este valor para bajar el logo. */
     /* Si ya tienes otras propiedades para .logo, colócalas aquí también */
+    margin-left: -40px;
 }
 
 main {
     flex-grow: 1; /* ¡Esto hace que la sección 'main' se estire para ocupar todo el espacio disponible! */
 }
 
+/* --- MODIFICADO: Estilos para el contenedor de la navegación --- */
+/* ELIMINADO/COMENTADO: Esta regla estaba haciendo que la barra se extendiera demasiado */
+/* .main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+} */
+
+.main-nav {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-left: 40px;
+}
+
 .main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* MODIFICADO PARA RESPONSIVE: Hace que los ítems del menú se pongan en fila */
-}
-
-.main-nav li {
-    margin-left: 40px;
+    display: flex;
+    justify-content: flex-start; /* MODIFICADO: Distribuye el espacio uniformemente entre los ítems */
+    /* width: auto; /* Esta línea ya no es necesaria con 'space-around' aquí */
+    gap: 20px;
+    margin-left: -80px; /* ¡MODIFICADO AQUÍ! Añade este margen negativo para moverlo a la izquierda */
 }
 
 .main-nav a {
@@ -99,17 +116,16 @@ main {
 
 /* ---------------------------------------------------------- */
 /* --- NUEVA SECCIÓN PARA EL CONTENIDO (PORTAFOLIOS Y BOTONES) --- */
-/* --- ¡REGLAS AÑADIDAS! --- */
 /* ---------------------------------------------------------- */
 .portfolio-content-section {
-    padding-top: 160px; /* ¡NUEVO! Controla el espacio superior. Ajusta este valor. */
+    padding-top: 160px; /* Controla el espacio superior. Ajusta este valor. */
     padding-bottom: 80px; /* Mantén un padding inferior, o ajusta si lo necesitas */
     text-align: center;
     background-color: #000;
     min-height: 500px; /* Mantén esta altura para un buen tamaño de la sección */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */ /* ¡ELIMINA O COMENTA ESTA LÍNEA! */
+    /* justify-content: center; */ /* ELIMINADO/COMENTADO: Ajusta el padding superior si necesitas centrar verticalmente */
     align-items: center;
 }
 
@@ -147,7 +163,7 @@ main {
 }
 
 /* Estilos para cada botón de portafolio individual */
-.btn-portfolio { /* ¡Usamos esta nueva clase para los botones de esta sección! */
+.btn-portfolio { /* Usamos esta nueva clase para los botones de esta sección! */
     background-color: #000;
     color: #fff;
     text-decoration: none; /* Quita el subrayado azul */
@@ -276,21 +292,30 @@ footer p {
         flex-direction: column; /* Apila el logo y la navegación */
         text-align: center; /* Centra el texto en el header */
         max-width: 90%; /* Ajusta el ancho del contenedor del header */
+        width: auto; /* MODIFICADO: Permite que el ancho se adapte al contenido en móviles */
         height: auto; /* Permite que la altura se ajuste automáticamente */
-        transform: translateX(0); /* Quita la transformación horizontal */
+        transform: translateX(0); /* MODIFICADO: ¡IMPORTANTE! Quita la transformación horizontal que te mueve el contenedor */
         padding: 15px; /* Ajusta el padding para móviles */
+        flex-wrap: wrap; /* AÑADIDO: Permite que los elementos se envuelvan en pantallas pequeñas */
     }
     .logo {
         margin-top: 0; /* Quita el margen superior del logo cuando se apila */
         margin-bottom: 15px; /* Añade un pequeño espacio debajo del logo */
     }
+    /* MODIFICADO: Eliminada la regla .main-nav para pantallas pequeñas también, no es necesaria aquí */
+    /* .main-nav {
+        flex-grow: 0;
+        width: 100%;
+        margin-left: 0;
+    } */
     .main-nav ul {
         flex-direction: column; /* Apila los ítems del menú */
         margin-top: 15px; /* Espacio entre el logo y el menú apilado */
+        align-items: center; /* AÑADIDO: Centra los ítems del menú apilado */
+        justify-content: flex-start;
+        gap: 20px;
     }
-    .main-nav li {
-        margin: 8px 0; /* Espacio vertical entre ítems de menú */
-    }
+    
     .main-nav a {
         font-size: 1.1rem; /* Ajusta tamaño de fuente */
     }
@@ -394,4 +419,22 @@ footer p {
     footer p, footer a {
         font-size: 0.9rem; /* Texto del footer más pequeño */
     }
+}
+
+/* ¡PRECISIÓN AQUI! Estas son las reglas modificadas para "DESARROLLO WEB" */
+/* Asegura que 'DESARROLLO WEB' no se vea como un botón, pero siga siendo cliqueable */
+.main-nav ul li:nth-child(3) a {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    /* ANTES TENÍA: color: #fff; */
+    /* AHORA: Ya no tiene un 'color' fijo aquí para que el :hover funcione correctamente */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* NUEVA REGLA: Color azul al pasar el cursor sobre "DESARROLLO WEB" */
+.main-nav ul li:nth-child(3) a:hover {
+    color: #007bff; /* Color azul al pasar el cursor */
 }
