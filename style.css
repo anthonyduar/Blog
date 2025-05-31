@@ -18,6 +18,7 @@ html {
 /* Contenedor general para centrar el contenido (lo usas en Header, la nueva sección de Portafolios y Footer) */
 .container {
     max-width: 960px; /* Ancho máximo según tu diseño */
+    width: 90%; /* MODIFICADO PARA RESPONSIVE: Hace que ocupe el 90% del ancho de la pantalla */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -27,8 +28,7 @@ html {
 /* ----------------------------- */
 header {
     background-color: #000;
-    /* Cambia el primer valor de 20px a un valor mayor, por ejemplo 30px */
-    padding: 50px 0; /* ¡CAMBIA ESTA LÍNEA! De 20px 0 a 30px 0 */
+    padding: 50px 0;
     border-bottom: 1px solid #333;
 }
 
@@ -45,6 +45,9 @@ header .container {
     padding: 0 15px;
     border: 1px solid white;
     transform: translateX(-10px);
+    /* AÑADIDO PARA RESPONSIVE */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: space-between; /* MODIFICADO: Para que el logo y la navegación se separen al inicio */
 }
 
 .logo {
@@ -60,7 +63,7 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* MODIFICADO PARA RESPONSIVE: Hace que los ítems del menú se pongan en fila */
 }
 
 .main-nav li {
@@ -91,7 +94,7 @@ main {
     width: 100%;
     border: 1px solid white;
     /* ¡IMPORTANTE! Eliminadas las propiedades de flexbox de aquí.
-       Esta sección YA NO CONTIENE el texto ni los botones. */
+        Esta sección YA NO CONTIENE el texto ni los botones. */
 }
 
 /* ---------------------------------------------------------- */
@@ -140,7 +143,7 @@ main {
     display: flex;
     justify-content: center; /* Centra los botones horizontalmente */
     gap: 30px; /* Espacio entre los botones */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* AÑADIDO PARA RESPONSIVE: Permite que los botones se envuelvan */
 }
 
 /* Estilos para cada botón de portafolio individual */
@@ -175,34 +178,9 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: flex-start; 
-    align-items: flex-start; /* Alinea los bloques al inicio (arriba) de su contenedor. */
-    flex-wrap: wrap;
-    color: black;
-    margin: 0 auto;
-    max-width: 1200px; /* Ancho máximo del contenido del footer. Ajusta si es necesario. */
-    padding: 40px 20px; /* Espacio interno del footer. */
-    /* Asegúrate de que no haya padding-bottom aquí si te causa espacio extra en el footer. */
-    /* Por ejemplo, puedes usar: padding: 40px 20px 20px; o ajustar si es necesario */
-}
-
-/* ----------------- */
-/* --- FOOTER --- */
-/* ----------------- */
-footer {
-    background-color: white;
-    padding: 40px 0;
-    border-top: 1px solid #333;
-    margin-top: auto;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.footer-content {
-    display: flex;
     justify-content: flex-start; /* Asegura que todo el contenido se pegue a la izquierda */
     align-items: flex-start; /* Alinea los bloques al inicio (arriba) de su contenedor principal */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap; /* AÑADIDO PARA RESPONSIVE: Permite que los elementos se envuelvan en pantallas pequeñas */
     color: black;
     margin: 0 auto;
     max-width: 1200px; /* Ancho máximo del contenido del footer. */
@@ -228,7 +206,7 @@ footer {
     display: flex; /* Permite que "RRSS" y "CONTACTO" estén en fila. */
     gap: 150px; /* Espacio horizontal entre "RRSS" y "CONTACTO". */
     align-items: flex-start; /* Alinea sus contenidos en la parte superior. */
-    margin-left: 100px;    
+    margin-left: 100px;
     /* No necesitamos margin-right aquí, ya que el espacio con el logo se gestiona desde .footer-logo */
 }
 
@@ -285,4 +263,135 @@ footer p {
 .social-media ul li a {
     display: flex; /* Para poner el ícono y el texto en la misma línea */
     align-items: center; /* Para centrarlos verticalmente */
+}
+
+/* ---------------------------------------------------- */
+/* --- MEDIA QUERIES PARA RESPONSIVE DESIGN (AÑADIDAS) --- */
+/* ---------------------------------------------------- */
+
+/* Para pantallas de hasta 768px (tablets y móviles más grandes) */
+@media (max-width: 768px) {
+    /* HEADER: Logo y menú se apilan */
+    header .container {
+        flex-direction: column; /* Apila el logo y la navegación */
+        text-align: center; /* Centra el texto en el header */
+        max-width: 90%; /* Ajusta el ancho del contenedor del header */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        transform: translateX(0); /* Quita la transformación horizontal */
+        padding: 15px; /* Ajusta el padding para móviles */
+    }
+    .logo {
+        margin-top: 0; /* Quita el margen superior del logo cuando se apila */
+        margin-bottom: 15px; /* Añade un pequeño espacio debajo del logo */
+    }
+    .main-nav ul {
+        flex-direction: column; /* Apila los ítems del menú */
+        margin-top: 15px; /* Espacio entre el logo y el menú apilado */
+    }
+    .main-nav li {
+        margin: 8px 0; /* Espacio vertical entre ítems de menú */
+    }
+    .main-nav a {
+        font-size: 1.1rem; /* Ajusta tamaño de fuente */
+    }
+
+
+    /* SECCIÓN PORTAFOLIOS: Títulos y botones se ajustan */
+    .portfolio-content-section {
+        padding-top: 80px; /* Reduce el padding superior en pantallas pequeñas */
+        padding-bottom: 50px; /* Reduce el padding inferior */
+    }
+    .portfolio-content-section h1 {
+        font-size: 2.5rem; /* Título "PORTAFOLIOS" más pequeño */
+    }
+    .portfolio-content-section p {
+        font-size: 1.1rem; /* Texto de descripción más pequeño */
+    }
+    .arrow-icon {
+        width: 20px; /* Flecha un poco más pequeña */
+        height: 20px;
+        vertical-align: -5px; /* Ajusta la alineación si es necesario */
+    }
+    .portfolio-buttons {
+        flex-direction: column; /* Apila los botones */
+        align-items: center; /* Centra los botones apilados */
+        gap: 15px; /* Espacio entre botones apilados */
+    }
+    .btn-portfolio {
+        width: 80%; /* Los botones ocupan más ancho para ser más fáciles de tocar */
+        max-width: 300px; /* Máximo ancho para que no sean demasiado grandes */
+        padding: 12px 20px;
+        font-size: 1rem; /* Reduce el tamaño de fuente de los botones */
+    }
+
+    /* FOOTER: Las secciones se apilan */
+    footer .container {
+        flex-direction: column; /* Apila RRSS y CONTACTO */
+        text-align: center; /* Centra el texto del footer */
+        align-items: center; /* Centra los elementos apilados */
+        padding: 30px 20px; /* Ajusta el padding */
+    }
+    .footer-logo {
+        margin-right: 0; /* Quita el margen derecho */
+        margin-bottom: 30px; /* Añade más espacio debajo del logo */
+        align-items: center; /* Centra el logo del footer */
+    }
+    .footer-logo img {
+        width: 180px; /* Hace el logo del footer más pequeño */
+    }
+    .footer-right-columns {
+        flex-direction: column; /* Apila RRSS y Contacto */
+        gap: 30px; /* Espacio vertical entre ellos */
+        margin-left: 0; /* Quita el margen izquierdo */
+        align-items: center; /* Centra RRSS y Contacto */
+    }
+    .social-media, .contact-info {
+        margin-bottom: 0; /* Elimina el margen si ya lo gestiona el gap */
+        align-items: center; /* Centra el contenido de cada columna */
+    }
+    .social-media ul {
+        justify-content: center; /* Centra los iconos de RRSS */
+        display: flex; /* Asegura que los li se pongan en línea para centrar */
+        padding: 0;
+    }
+    .social-media li {
+        margin: 0 10px; /* Espacio horizontal entre iconos */
+    }
+}
+
+/* Para pantallas muy pequeñas (smartphones) */
+@media (max-width: 480px) {
+    /* HEADER */
+    header .container {
+        padding: 10px; /* Menos padding en pantallas muy pequeñas */
+    }
+    .logo img {
+        width: 40px; /* Logo de navegación un poco más pequeño */
+    }
+    .main-nav a {
+        font-size: 1rem; /* Letras de navegación más pequeñas */
+    }
+
+    /* PORTAFOLIOS */
+    .portfolio-content-section h1 {
+        font-size: 2rem; /* Título PORTAFOLIOS aún más pequeño */
+    }
+    .portfolio-content-section p {
+        font-size: 1rem; /* Texto de descripción más pequeño */
+    }
+    .btn-portfolio {
+        padding: 10px 15px; /* Botones más pequeños */
+        font-size: 0.9rem; /* Texto de botón más pequeño */
+    }
+
+    /* FOOTER */
+    .footer-logo img {
+        width: 150px; /* Logo del footer más pequeño */
+    }
+    footer h4 {
+        font-size: 1rem; /* Títulos del footer más pequeños */
+    }
+    footer p, footer a {
+        font-size: 0.9rem; /* Texto del footer más pequeño */
+    }
 }
