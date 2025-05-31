@@ -1,0 +1,288 @@
+/* ---------------------------------------------------- */
+/* --- ESTILOS BASE Y CONTENEDOR (YA ESTABAN BIEN) --- */
+/* ---------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    height: 100%;
+}
+
+/* Contenedor general para centrar el contenido (lo usas en Header, la nueva sección de Portafolios y Footer) */
+.container {
+    max-width: 960px; /* Ancho máximo según tu diseño */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ----------------------------- */
+/* --- HEADER (BARRA SUPERIOR) --- */
+/* ----------------------------- */
+header {
+    background-color: #000;
+    /* Cambia el primer valor de 20px a un valor mayor, por ejemplo 30px */
+    padding: 50px 0; /* ¡CAMBIA ESTA LÍNEA! De 20px 0 a 30px 0 */
+    border-bottom: 1px solid #333;
+}
+
+header .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 560px;
+    height: 57px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0 15px;
+    border: 1px solid white;
+    transform: translateX(-10px);
+}
+
+.logo {
+    margin-top: 4px; /* Ajusta este valor para bajar el logo. */
+    /* Si ya tienes otras propiedades para .logo, colócalas aquí también */
+}
+
+main {
+    flex-grow: 1; /* ¡Esto hace que la sección 'main' se estire para ocupar todo el espacio disponible! */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 40px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.main-nav a:hover {
+    color: #007bff;
+}
+
+/* ------------------------------------------------- */
+/* --- SECCIÓN DEL BANNER (SOLO FONDO EN EL HTML) --- */
+/* --- ¡REGLAS ACTUALIZADAS! --- */
+/* ------------------------------------------------- */
+.hero-section {
+    background-image: url('Imagenes/banner/banner.jpg'); /* RUTA EXACTA DE TU IMAGEN DE BANNER COMPLETA */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 533px; /* La altura de tu banner */
+    width: 100%;
+    border: 1px solid white;
+    /* ¡IMPORTANTE! Eliminadas las propiedades de flexbox de aquí.
+       Esta sección YA NO CONTIENE el texto ni los botones. */
+}
+
+/* ---------------------------------------------------------- */
+/* --- NUEVA SECCIÓN PARA EL CONTENIDO (PORTAFOLIOS Y BOTONES) --- */
+/* --- ¡REGLAS AÑADIDAS! --- */
+/* ---------------------------------------------------------- */
+.portfolio-content-section {
+    padding-top: 160px; /* ¡NUEVO! Controla el espacio superior. Ajusta este valor. */
+    padding-bottom: 80px; /* Mantén un padding inferior, o ajusta si lo necesitas */
+    text-align: center;
+    background-color: #000;
+    min-height: 500px; /* Mantén esta altura para un buen tamaño de la sección */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */ /* ¡ELIMINA O COMENTA ESTA LÍNEA! */
+    align-items: center;
+}
+
+.arrow-icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: -7px; /* Prueba con un valor negativo como -3px o -5px para bajarla */
+    margin-left: 1px;
+}
+
+/* Estilos para el título H1 dentro de la nueva sección de portafolios */
+.portfolio-content-section h1 {
+    font-family: 'Holtwood One SC', serif;
+    font-size: 48px; /* Tamaño de "PORTAFOLIOS" */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* Estilos para el párrafo P dentro de la nueva sección de portafolios */
+.portfolio-content-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    opacity: 0.8;
+    color: #fff;
+    margin-bottom: 40px; /* Espacio entre el párrafo y los botones */
+}
+
+/* Contenedor de los botones dentro de la nueva sección */
+.portfolio-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 30px; /* Espacio entre los botones */
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada botón de portafolio individual */
+.btn-portfolio { /* ¡Usamos esta nueva clase para los botones de esta sección! */
+    background-color: #000;
+    color: #fff;
+    text-decoration: none; /* Quita el subrayado azul */
+    padding: 15px 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Añade transición para el borde */
+}
+
+.btn-portfolio:hover {
+    background-color: #1a1a1a;
+    border-color: #007bff;
+}
+
+/* ----------------- */
+/* --- FOOTER --- */
+/* ----------------- */
+footer {
+    background-color: white;
+    padding: 40px 0;
+    border-top: 1px solid #333;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; /* Alinea los bloques al inicio (arriba) de su contenedor. */
+    flex-wrap: wrap;
+    color: black;
+    margin: 0 auto;
+    max-width: 1200px; /* Ancho máximo del contenido del footer. Ajusta si es necesario. */
+    padding: 40px 20px; /* Espacio interno del footer. */
+    /* Asegúrate de que no haya padding-bottom aquí si te causa espacio extra en el footer. */
+    /* Por ejemplo, puedes usar: padding: 40px 20px 20px; o ajustar si es necesario */
+}
+
+/* ----------------- */
+/* --- FOOTER --- */
+/* ----------------- */
+footer {
+    background-color: white;
+    padding: 40px 0;
+    border-top: 1px solid #333;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: flex-start; /* Asegura que todo el contenido se pegue a la izquierda */
+    align-items: flex-start; /* Alinea los bloques al inicio (arriba) de su contenedor principal */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    color: black;
+    margin: 0 auto;
+    max-width: 1200px; /* Ancho máximo del contenido del footer. */
+    padding: 40px 20px; /* Espacio interno del footer. */
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Apila el logo principal y los círculos */
+    align-items: flex-start; /* Alinea el logo y los círculos a la izquierda dentro de este bloque */
+    margin-right: 100px; /* Espacio a la derecha del bloque del logo/círculos para separarlo de RRSS/Contacto. Ajusta si es necesario. */
+}
+
+.footer-logo img {
+    width: 237px; /* Tamaño del logo principal del footer */
+    height: auto;
+    /* margin-bottom: 10px; */ /* Si necesitas espacio entre el logo y los círculos */
+}
+
+/* --- NUEVO CONTENEDOR PARA AGRUPAR RRSS Y CONTACTO --- */
+.footer-right-columns {
+    display: flex; /* Permite que "RRSS" y "CONTACTO" estén en fila. */
+    gap: 150px; /* Espacio horizontal entre "RRSS" y "CONTACTO". */
+    align-items: flex-start; /* Alinea sus contenidos en la parte superior. */
+    margin-left: 100px;    
+    /* No necesitamos margin-right aquí, ya que el espacio con el logo se gestiona desde .footer-logo */
+}
+
+.social-media, .contact-info {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los ítems a la izquierda dentro de su propia columna. */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+footer h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+footer p {
+    font-size: 18px;
+    margin: 0;
+}
+/* Estilos para los íconos */
+.social-icon {
+    width: 28px; /* Tamaño del ícono, puedes ajustar */
+    height: 28px; /* Mismo tamaño que el ancho para que sea cuadrado */
+    vertical-align: middle; /* Alinea el ícono con el texto */
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilo para alinear el ícono y el texto en el enlace */
+.social-media ul li a {
+    display: flex; /* Para poner el ícono y el texto en la misma línea */
+    align-items: center; /* Para centrarlos verticalmente */
+}
