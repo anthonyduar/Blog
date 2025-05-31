@@ -400,6 +400,8 @@ footer p {
     }
     .main-nav ul {
         padding-left: 20px; /* Ajuste para centrar en móvil */
+        padding-right: 10px;
+        padding-top: 5px;
     }
 
     /* PORTAFOLIOS */
