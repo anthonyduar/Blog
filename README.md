@@ -9,8 +9,9 @@ Este portafolio presenta una selección de mis trabajos y proyectos clave en div
 
 * ## Características Destacadas
 
+* Diseño inicial concebido y prototipado en Figma.
 * Navegación intuitiva y fácil acceso a diferentes secciones.
-* Diseño responsivo para una visualización óptima en cualquier dispositivo.
+* Implementación responsiva para una visualización óptima en cualquier dispositivo.
 * Integración con GitHub para explorar los repositorios de mis proyectos.
 
 * ## Despliegue
