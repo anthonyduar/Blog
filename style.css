@@ -389,6 +389,7 @@ footer p {
     /* HEADER */
     header .container {
         padding: 10px; /* Menos padding en pantallas muy pequeñas */
+        flex-direction: row;
     }
     .logo img {
         width: 40px; /* Logo de navegación un poco más pequeño */
