@@ -28,7 +28,3 @@ Puedes contactarme a través de:
 * ## Licencia
 
 Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para más detalles.<  
-
-## Agradecimientos
-
-Quiero expresar mi agradecimiento a Gemini (Google AI) por su invaluable asistencia y guía durante el desarrollo y optimización de este portafolio.
