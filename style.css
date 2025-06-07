@@ -446,3 +446,29 @@ footer p {
 .main-nav ul li:nth-child(3) a:hover {
     color: #007bff; /* Color azul al pasar el cursor */
 }
+/* --- CÓDIGO PARA ANIMACIONES DE SCROLL (ACTUALIZADO) --- */
+
+/* Keyframes para la animación de los elementos al hacer scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Viene desde abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo inicial para TODOS los elementos que se animarán al scroll */
+.animate-on-scroll {
+    opacity: 0; /* Por defecto, están ocultos */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transición suave para evitar parpadeos */
+}
+
+/* Clase que se añade cuando el elemento es visible, activando la animación */
+.animate-on-scroll.is-visible {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* --- FIN CÓDIGO PARA ANIMACIONES DE SCROLL --- */
