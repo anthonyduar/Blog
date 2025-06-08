@@ -472,3 +472,7 @@ footer p {
 }
 
 /* --- FIN CÓDIGO PARA ANIMACIONES DE SCROLL --- */
+
+html {
+  scroll-behavior: smooth;
+}
