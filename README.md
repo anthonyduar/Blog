@@ -12,6 +12,7 @@ Este portafolio presenta una selección de mis trabajos y proyectos clave en div
 * Diseño inicial concebido y prototipado en Figma.
 * Navegación intuitiva y fácil acceso a diferentes secciones.
 * Implementación responsiva para una visualización óptima en cualquier dispositivo.
+* Experiencia de usuario dinámica con animaciones de entrada y al hacer scroll.
 * Integración con GitHub para explorar los repositorios de mis proyectos.
 
 * ## Despliegue
