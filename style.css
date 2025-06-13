@@ -36,7 +36,7 @@ header .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 520px; /* ¡MODIFICADO: AUMENTADO PARA QUE "DESARROLLO WEB" QUEPA! */
+    max-width: 640px; /* ¡MODIFICADO: AUMENTADO PARA QUE "DESARROLLO WEB" QUEPA! */
     width: 90%; /* Sigue siendo flexible en pantallas más pequeñas */
     height: 57px; /* Altura específica */
     margin: 0 auto; /* Para centrar la barra horizontalmente */
