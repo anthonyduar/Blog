@@ -1,27 +1,34 @@
-/* Ajustes de la nueva barra compacta */
-.nav-wrapper {
+/* --- Modificación de la barra Portafolio --- */
+header {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 10px; /* Logo y texto bien juntos */
-  background-color: #111; /* Color oscuro */
-  padding: 8px 20px;
-  border-radius: 50px; /* Bordes redondeados */
-  width: fit-content; /* Barra pequeña ajustada al contenido */
-  margin: 20px auto; /* Centrada en la pantalla */
-  border: 1px solid #ffffff33; /* Borde sutil */
+  padding: 20px 0;
 }
 
-.main-nav ul {
+.nav-container-centered {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio corto entre logo y texto */
+  background-color: #111; /* Fondo oscuro */
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: 1px solid #333;
+  width: fit-content; /* Se ajusta al contenido */
+}
+
+.nav-container-centered .main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
-.main-nav ul li a {
-  font-size: 1.2rem; /* Palabra un poco más grande */
+.nav-container-centered .main-nav ul li a {
+  font-size: 1.3rem; /* Tamaño de letra más grande */
   color: white;
   text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
+/* --- Fin de la modificación --- */
