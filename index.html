@@ -16,7 +16,7 @@
   </head>
   <body>
     <header class="animate-on-scroll">
-      <div class="container">
+      <div class="container nav-wrapper">
         <div class="logo">
           <img
             src="Imagenes/logo mini/logomini.png"
@@ -39,7 +39,6 @@
             dataLayer.push(arguments);
           }
           gtag("js", new Date());
-
           gtag("config", "G-EZ881MG7FP");
         </script>
       </div>
@@ -152,7 +151,6 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const elements = document.querySelectorAll(".animate-on-scroll");
-
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -164,10 +162,9 @@
             });
           },
           {
-            threshold: 0, // El elemento se anima tan pronto como un pixel es visible/invisible
+            threshold: 0,
           },
         );
-
         elements.forEach((element) => {
           observer.observe(element);
         });
