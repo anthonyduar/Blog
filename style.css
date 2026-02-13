@@ -1,34 +1,316 @@
-/* --- Modificación de la barra Portafolio --- */
+/* ---------------------------------------------------- */
+/* --- ESTILOS BASE Y CONTENEDOR (YA ESTABAN BIEN) --- */
+/* ---------------------------------------------------- */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  height: 100%;
+}
+
+.container {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------------------------------------------------- */
+/* --- HEADER (BARRA MODIFICADA: COMPACTA Y CENTRADA) --- */
+/* ---------------------------------------------------- */
 header {
-  width: 100%;
+  background-color: #000;
+  padding: 30px 0; /* Espacio superior */
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: center; /* Centra la barra en la pantalla */
+}
+
+header .container {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  align-items: center;
+  gap: 15px; /* Logo y texto juntos */
+  width: fit-content; /* Barra pequeña ajustada al contenido */
+  height: 60px;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  border-radius: 50px; /* Estilo píldora */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0 25px;
+  border: 1px solid white;
+  transform: none; /* Quitamos el efecto de sacar a la izquierda */
+  flex-wrap: nowrap;
 }
 
-.nav-container-centered {
+.logo {
+  margin: 0; /* Limpiamos márgenes que lo desvían */
   display: flex;
   align-items: center;
-  gap: 15px; /* Espacio corto entre logo y texto */
-  background-color: #111; /* Fondo oscuro */
-  padding: 10px 25px;
-  border-radius: 50px;
-  border: 1px solid #333;
-  width: fit-content; /* Se ajusta al contenido */
 }
 
-.nav-container-centered .main-nav ul {
+.main-nav {
+  display: flex;
+  margin-left: 0;
+}
+
+.main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 0;
 }
 
-.nav-container-centered .main-nav ul li a {
-  font-size: 1.3rem; /* Tamaño de letra más grande */
-  color: white;
+.main-nav a {
   text-decoration: none;
+  color: #fff;
   font-weight: bold;
-  letter-spacing: 0.5px;
+  font-size: 20px; /* Texto un poco más grande */
 }
-/* --- Fin de la modificación --- */
+
+.main-nav a:hover {
+  color: #007bff;
+}
+
+/* ------------------------------------------------- */
+/* --- SECCIÓN DEL BANNER --- */
+/* ------------------------------------------------- */
+main {
+  flex-grow: 1;
+}
+
+.hero-section {
+  background-image: url("Imagenes/banner/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 533px;
+  width: 100%;
+  border: 1px solid white;
+}
+
+/* ---------------------------------------------------------- */
+/* --- SECCIÓN PARA EL CONTENIDO (PORTAFOLIOS Y BOTONES) --- */
+/* ---------------------------------------------------------- */
+.portfolio-content-section {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  text-align: center;
+  background-color: #000;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow-icon {
+  width: 25px;
+  height: 25px;
+  vertical-align: -7px;
+  margin-left: 1px;
+}
+
+.portfolio-content-section h1 {
+  font-family: "Holtwood One SC", serif;
+  font-size: 48px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.portfolio-content-section p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  opacity: 0.8;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.portfolio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-portfolio {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-portfolio:hover {
+  background-color: #1a1a1a;
+  border-color: #007bff;
+}
+
+/* ----------------- */
+/* --- FOOTER --- */
+/* ----------------- */
+footer {
+  background-color: white;
+  padding: 40px 0;
+  border-top: 1px solid #333;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: black;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 20px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 100px;
+}
+
+.footer-logo img {
+  width: 237px;
+  height: auto;
+}
+
+.footer-right-columns {
+  display: flex;
+  gap: 150px;
+  align-items: flex-start;
+  margin-left: 100px;
+}
+
+.social-media,
+.contact-info {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer h4 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+footer p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.social-media ul li a {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------------------------------------------------- */
+/* --- MEDIA QUERIES PARA RESPONSIVE --- */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+  header .container {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+  }
+  .main-nav ul {
+    gap: 10px;
+  }
+  .portfolio-content-section h1 {
+    font-size: 2.5rem;
+  }
+  .footer-right-columns {
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 40px;
+  }
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- ANIMACIONES --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
