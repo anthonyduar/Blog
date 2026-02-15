@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="Imagenes/Iconos/logo.ico" />
+    <meta name="description" content="Portafolio de Anthony Duarte, mostrando proyectos de Redacción/Periodismo, Marketing/Diseño y Desarrollo Web." />
+    <link rel="icon" href="Imagenes/Iconos/logo.ico" />
   </head>
   <body>
     <header class="animate-on-scroll">
@@ -20,7 +20,7 @@
         <div class="logo">
           <img
             src="Imagenes/logo mini/logomini.png"
-            alt="Ahrora Logo"
+            alt="Logo de Anthony Duarte"
             width="50"
           />
         </div>
@@ -57,7 +57,7 @@
             Conoce mi trabajo
             <img
               src="Imagenes/Iconos/flecha.png"
-              alt="Flecha hacia abajo"
+              alt="Icono de flecha hacia abajo"
               class="arrow-icon"
             />
           </p>
@@ -96,7 +96,7 @@
         <div class="footer-logo">
           <img
             src="Imagenes/logo footer/logofooter.png"
-            alt="Ahrora Logo Footer"
+            alt="Logo de Anthony Duarte en el pie de página"
             width="40"
           />
         </div>
@@ -111,7 +111,7 @@
                 >
                   <img
                     src="Imagenes/Iconos/linkedin.png"
-                    alt="LinkedIn"
+                    alt="Icono de LinkedIn"
                     class="social-icon"
                   />
                   LinkedIn
@@ -124,7 +124,7 @@
                 >
                   <img
                     src="Imagenes/Iconos/instagram.png"
-                    alt="Instagram"
+                    alt="Icono de Instagram"
                     class="social-icon"
                   />
                   Instagram
@@ -137,7 +137,7 @@
             <p>
               <img
                 src="Imagenes/Iconos/gmail.png"
-                alt="Gmail"
+                alt="Icono de Gmail"
                 class="social-icon"
               />
               anthonyraduarte@gmail.com
@@ -147,27 +147,6 @@
       </div>
     </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const elements = document.querySelectorAll(".animate-on-scroll");
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-              } else {
-                entry.target.classList.remove("is-visible");
-              }
-            });
-          },
-          {
-            threshold: 0,
-          },
-        );
-        elements.forEach((element) => {
-          observer.observe(element);
-        });
-      });
-    </script>
+    <script src="scripts.js" defer></script>
   </body>
 </html>
